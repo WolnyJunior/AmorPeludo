@@ -2,7 +2,6 @@ body {
     margin: 0;
     position: relative;
     width: 100%;
-    /* cursor: url("https://img.icons8.com/ios/50/cat-footprint.png"), auto; */
 }
 
 body h2,
@@ -72,13 +71,11 @@ header section .superior {
 
 .navbar .nav-icons {
     font-size: 22px;
-    color: #24ace3;
     text-shadow: 1px 1px 0.5px #666;
     transition: all .8s;
 }
 
 .nav-icons:hover {
-    color: black;
     text-shadow: 1.5px 1.5px 0.5px #24ace3;
     transform: scale(1.5);
 }
@@ -208,36 +205,52 @@ main section {
     cursor: url("https://img.icons8.com/ios/50/cat-footprint.png"), auto;
 }
 
-.cidades {
-    width: 80%;
+.grid-container {
+    display: grid;
+    width: 90%;
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
+    grid-template-columns: auto auto auto auto;
+    background-color: rgba(36, 172, 227, .4);
+    gap: 30px;
+    padding: 30px;
 }
 
-.cidades a {
-    text-decoration: none;
-    color: black;
+.grid-item {
+    text-align: center;
+    border: 2px solid black;
+    background-color: #ffce45;
+    width: 100%;
+    padding: 20px;
 }
 
-.cidades img {
-    /* margin-bottom: 10px; */
-    width: 50%;
-    border-radius: 20px;
+.grid-item img {
+    width: 100%;
+    margin-bottom: 10px;
 }
 
-.city {
-    transition: all .7s;
-    /* margin: 25px; */
-    border: 5px solid #ffffff;
+.grid-item div ul li{
+    width: 80%;
+    margin-left: 10px;
+    list-style: none;
 }
 
-.city:hover {
-    border: 5px solid #24ace3;
-    box-shadow: 10px 10px 20px rgba(36, 172, 227, .7);
-    border-radius: 25px;
-    background: rgba(36, 172, 227, .2);
-}
+.grid-item div ul li::before{  /* ***COLOCANDO UMA IMAGEM ANTES DA LISTA*/
+    content: '';    /*  CONTEÚDO FICA VAZIO COM ASPAS SIMPLES*/
+    display: inline-block;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    background-image: url("https://img.icons8.com/ios/50/pets--v1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;/*  OCUPAR O ESPAÇO */
+} 
 
+
+.col {
+    border: 2px solid black;
+}
 
 footer a {
     text-decoration: none;
@@ -250,7 +263,6 @@ footer {
 
 .rodape {
     width: 100%;
-    /* height: 50vh; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -313,6 +325,12 @@ footer {
     padding: 20px;
 }
 
+@media screen and (max-width:1024px) {
+    .grid-container{
+        grid-template-columns: auto auto auto;
+    }    
+}
+
 @media screen and (max-width:768px) {
 
     .top-bar .site-title h2 {
@@ -330,27 +348,21 @@ footer {
         padding: 30px;
         font-size: 2.3vh;
     }
-
-
-}
-
-@media screen and (min-width: 595px) {
-    nav .extra {
-        display: none;
+    .grid-container {
+        grid-template-columns: auto auto;
     }
-
-    /* .dispositivo-movel {
-        display: none;
-    } */
 }
 
 @media screen and (max-width:595px) {
-
     .missao-visao-valores {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .grid-container {
+        grid-template-columns: auto;
     }
 
     .rodape {
