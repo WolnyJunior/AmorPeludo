@@ -378,6 +378,11 @@ footer {
     .grid-container {
         grid-template-columns: auto auto;
     }
+
+    .formulario{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width:595px) {
