@@ -214,6 +214,7 @@ main section {
     background-color: rgba(36, 172, 227, .4);
     gap: 30px;
     padding: 30px;
+    border-radius: 8px;
 }
 
 .grid-item {
@@ -229,14 +230,16 @@ main section {
     margin-bottom: 10px;
 }
 
-.grid-item div ul li{
+.grid-item div ul li {
     width: 80%;
     margin-left: 10px;
     list-style: none;
 }
 
-.grid-item div ul li::before{  /* ***COLOCANDO UMA IMAGEM ANTES DA LISTA*/
-    content: '';    /*  CONTEÚDO FICA VAZIO COM ASPAS SIMPLES*/
+.grid-item div ul li::before {
+    /* ***COLOCANDO UMA IMAGEM ANTES DA LISTA*/
+    content: '';
+    /*  CONTEÚDO FICA VAZIO COM ASPAS SIMPLES*/
     display: inline-block;
     margin-right: 10px;
     width: 25px;
@@ -244,14 +247,37 @@ main section {
     background-image: url("https://img.icons8.com/ios/50/pets--v1.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;/*  OCUPAR O ESPAÇO */
-} 
-
-
-.col {
-    border: 2px solid black;
+    background-size: cover;
+    /*  OCUPAR O ESPAÇO */
 }
 
+.formulario {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding: 20px;
+}
+
+form {
+    background-color: rgba(36, 172, 227, .4);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+form .cadastro {
+    display: block;
+}
+
+.cadastro div input {
+    margin: 3px;
+    width: 45%;
+}
+
+.cadastro h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
 footer a {
     text-decoration: none;
     outline: none;
@@ -326,9 +352,9 @@ footer {
 }
 
 @media screen and (max-width:1024px) {
-    .grid-container{
+    .grid-container {
         grid-template-columns: auto auto auto;
-    }    
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -348,6 +374,7 @@ footer {
         padding: 30px;
         font-size: 2.3vh;
     }
+
     .grid-container {
         grid-template-columns: auto auto;
     }
