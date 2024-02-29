@@ -256,6 +256,14 @@ main section {
     /*  OCUPAR O ESPAÇO */
 }
 
+.pets-adotados div ul{
+    list-style: none;
+}
+
+#login{
+    height: 100px;
+}
+
 .formulario {
     display: grid;
     grid-template-columns: auto auto;
